@@ -1,0 +1,7 @@
+md5: 2e0ef7ad9d3d6cfeb422bba5600850c5
+outs:
+- md5: d50d59b0c40f10d37d379d9fd3fb98ac
+  path: books.csv
+  cache: true
+  metric: false
+  persist: false
