@@ -1,0 +1,27 @@
+md5: c4f9b899c26eeb1ba1840b426d0baafe
+cmd: python preprocessing/clean.py
+deps:
+- md5: c9d2def5b24ff6b5aa35e99eddf31f83
+  path: preprocessing/clean.py
+- md5: d50d59b0c40f10d37d379d9fd3fb98ac
+  path: data/books.csv
+- md5: 6ec3fe6463da9e149d474ed8226612a2
+  path: data/users.csv
+- md5: b34fe0534c9b846b8a45f316c60eb92b
+  path: data/ratings.csv
+outs:
+- md5: fa1e794bdb47c872d9c5f0cc9f8bfee0
+  path: data/books_clean.csv
+  cache: true
+  metric: false
+  persist: false
+- md5: 4a6e0c1104a26dec25bcae2a362a92a8
+  path: data/users_clean.csv
+  cache: true
+  metric: false
+  persist: false
+- md5: 0697cf5a1f7a77a981b6b67fbcdcfd9c
+  path: data/ratings_clean.csv
+  cache: true
+  metric: false
+  persist: false
