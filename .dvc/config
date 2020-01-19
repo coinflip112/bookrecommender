@@ -1,0 +1,2 @@
+['remote "recommender_remote"']
+url = gs://ds_book_recommender_bucket
