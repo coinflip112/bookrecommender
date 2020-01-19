@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bookrecommender-265608",
+  "private_key_id": "0f2c839c53336029c257e36af3bd0e703c16f3af",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDErtnl77tiTHEC\nhBS/8zACkf42SUH+2duVKd1OaH6ihAhhqgOJFQ4/nHWi98Js2P+5yRBK89JxXUJm\nDjmeohMTlYGvL0IcDtYRIforQk/VaC53hJUme/2klfT7iGLJG7y5HKefIJ92U9O3\ntS7fCKc2ebIVub67ceCC52KAgSyx7LXQFZtaC5n8crKNNe9oljdwKzp5E0zgrs06\nRbOEGBzBLTH8tcfiC9WdTyom0PAiOmuTzaY5cFR66ur0fuCWRh+FiTLbVay5iWtS\n1+sEc5ohzSzmk40o5GznMtI9g+TuOZeRvwkOObnDfJWsdOr4NCDyPKMI+hOldU1v\nVf+42rATAgMBAAECggEASnpv1uuGCL4rmSlM9jbvujlwizwIeqoixYRZ4mQdeAsJ\nZXpM5m8LuzjTLwglHrS5ea/StJ9J1FXdW+oNFa4IDUVzG1SI8zkHBOvZ4OG2e3h9\nCBMzq6QOM3H5l/pYdhFD0NEyBEcFO3iY1psMibasIyvILQPuXurLeqaGHWVM+H6h\nIfN5OgScZtV9YlLxXbGNKATE1Cg+QiQ/PddGf9S0TimgWyUKuXIXMBsKKoYaY8NT\n/pXwF9sT4m9duqlgByx5178xtU60Btp/OJrnxaTYeAG5Qa8GleCYcLcLGEVuAVWD\nIOTwZ4VSvzq90KkYeolX+bdN7iolYdD8Kgm23ACy+QKBgQDxVCTBCSBc7+nkzbwZ\naTHblLZC2+qHodvrHzyXwtr5Gy/Qct/AfXA9gHGtVoBpN1pKJnfdlZhA5jWU4b4u\nFoFoTJH0XD3MVh0glpLEQzdJnD7AqBZInRyR5CK0dez7YSjjbsTCTsLv0S8apGiE\nzlz0JqbycVwJ78UnKzLKyeLThwKBgQDQo+BQsRo2AlqmXYGTZOXCE/yWOdc+I6Me\nU58CiEZEXt1y+/u+ZTqHbjiklaMdJ2jqrv53XcI7HW1yHEsidT3MitmVFGVNIPRs\nyS8P3o5k1Z+TJmZSwwS0E/mz40AS0MVauljDapnjx/kcDWnV5P8kbcMkwrxBuSvC\nq3Az6kd6FQKBgQCkBZuhc9GCOTHQaCCjaMMRSicClDP4EYPGb4mgYDiyPM8nrxvy\n2Y7yzhz1Qiiu2odMhI7NlQJRgeYDFddLvdIgkIJXAmaiPhk37/8607B9IGvqR5Q1\nsEsdwV/xJYF3bZb71Wp34k5N7vBD/GBpe1TkQG0RtQhoXIW0VIEGIWdAewKBgEk8\nzTfmAxpkVyfA+QQhTdmDpI2jPiAs6Exz9AQyi9/iIQAE3gimhhYWJcH4WOqZ8+U1\nilOiUNTpboq4zdMJrqjHMLt5Dlo1sDcjo+aBLCDPMBW6S/7PQC5qOKPhqJMyP6Sq\ndxAZsm1Xu+UR/E299aX29aJIzUaQ1oCeJ2PB4FdFAoGBANRv1Gd70JXI+iHIVpwo\n1LMkySPhdjoNAHbPYn5jmehP9TDhq+uxcMDeVBzXNz6uhArhHoJK6fNwq0MeTj8y\nJUG6VMzy9MPpZN+pbEfrHe5qvBRd6nUAxuiRt4m8DgEB/DiPjZzsAaAYHhHEedmU\nRYUQVJGsrLCGdU9+Ys7nW/xX\n-----END PRIVATE KEY-----\n",
+  "client_email": "recommender@bookrecommender-265608.iam.gserviceaccount.com",
+  "client_id": "106742406706120593235",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/recommender%40bookrecommender-265608.iam.gserviceaccount.com"
+}
