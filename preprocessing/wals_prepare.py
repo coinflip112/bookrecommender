@@ -46,9 +46,7 @@ if __name__ == "__main__":
     )
 
     grouped_by_items = id_transformed_explicit_ratings.groupby("item_id")
-    with tf.io.TFRecordWriter(
-        "data/users_for_item.tfrecords"
-    ) as record_to_write:
+    with tf.io.TFRecordWriter("data/users_for_item.tfrecords") as record_to_write:
         for item, grouped in grouped_by_items:
             example = tf.train.Example(
                 features=tf.train.Features(
@@ -72,9 +70,7 @@ if __name__ == "__main__":
             record_to_write.write(example.SerializeToString())
 
     grouped_by_users = id_transformed_explicit_ratings.groupby("visitor_id")
-    with tf.io.TFRecordWriter(
-        "data/items_for_user.tfrecords"
-    ) as record_to_write:
+    with tf.io.TFRecordWriter("data/items_for_user.tfrecords") as record_to_write:
         for user, grouped in grouped_by_users:
             example = tf.train.Example(
                 features=tf.train.Features(
