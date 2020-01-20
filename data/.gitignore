@@ -4,3 +4,6 @@
 /books_clean.csv
 /users_clean.csv
 /ratings_clean.csv
+/id_transformed_explicit_ratings.csv
+/users_for_item.tfrecords
+/items_for_user.tfrecords
