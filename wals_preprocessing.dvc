@@ -1,0 +1,23 @@
+md5: 21308e666a515fd43672a353a7846626
+cmd: python preprocessing/wals_prepare.py
+deps:
+- md5: 8a80af7b25ce06b6ced47439d38608da
+  path: preprocessing/wals_prepare.py
+- md5: 0697cf5a1f7a77a981b6b67fbcdcfd9c
+  path: data/ratings_clean.csv
+outs:
+- md5: 554375748d0b9d412a7d6729fc5477e5
+  path: data/id_transformed_explicit_ratings.csv
+  cache: true
+  metric: false
+  persist: false
+- md5: 21c449e4bb27ee641e908a91727d27e3
+  path: data/users_for_item.tfrecords
+  cache: true
+  metric: false
+  persist: false
+- md5: 373acaa734528bf199538cfec0e3c447
+  path: data/items_for_user.tfrecords
+  cache: true
+  metric: false
+  persist: false
