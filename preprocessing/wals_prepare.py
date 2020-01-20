@@ -1,24 +1,13 @@
-from io import StringIO
 from pathlib import Path
 
-import isbnlib
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-from pandarallel import pandarallel
-
-pandarallel.initialize(progress_bar=True)
 
 
 if __name__ == "__main__":
-    books_path = Path("data", "books_clean.csv")
-    users_path = Path("data", "users_clean.csv")
     ratings_path = Path("data", "ratings_clean.csv")
-
-    books = pd.read_csv(books_path)
-    users = pd.read_csv(users_path)
     ratings = pd.read_csv(ratings_path)
-
     explicit_ratings = ratings.loc[ratings.rating != 0]
 
     def get_and_save_mapping(values, filename):
@@ -57,7 +46,7 @@ if __name__ == "__main__":
     )
 
     grouped_by_items = id_transformed_explicit_ratings.groupby("item_id")
-    with tf.python_io.TFRecordWriter(
+    with tf.io.TFRecordWriter(
         "data/users_for_item.tfrecords"
     ) as record_to_write:
         for item, grouped in grouped_by_items:
@@ -83,7 +72,7 @@ if __name__ == "__main__":
             record_to_write.write(example.SerializeToString())
 
     grouped_by_users = id_transformed_explicit_ratings.groupby("visitor_id")
-    with tf.python_io.TFRecordWriter(
+    with tf.io.TFRecordWriter(
         "data/items_for_user.tfrecords"
     ) as record_to_write:
         for user, grouped in grouped_by_users:
