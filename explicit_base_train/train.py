@@ -4,12 +4,6 @@ import tensorflow as tf
 import argparse
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "embedding_size", metavar="--e", type=int, help="Dimension for embedding size.",
-    )
-    args = parser.parse_args()
-
     explicit_train_set = pd.read_csv("data/explicit_train_set.csv")
     book_encoder = joblib.load("encoders/explicit_book.encoder")
     user_encoder = joblib.load("encoders/explicit_user.encoder")
@@ -33,9 +27,7 @@ if __name__ == "__main__":
         model.compile(loss="mae", optimizer="adam", metrics=["mae"])
         return model
 
-    model = create_simple_cf_model(
-        n_items=n_items, n_users=n_users, embedding_size=args.embedding_size
-    )
+    model = create_simple_cf_model(n_items=n_items, n_users=n_users, embedding_size=2)
     early_stopping = tf.keras.callbacks.EarlyStopping(
         monitor="val_mean_absolute_error", patience=20, restore_best_weights=True
     )
@@ -44,12 +36,12 @@ if __name__ == "__main__":
         y=explicit_train_set.rating.values,
         validation_split=0.1,
         callbacks=[early_stopping],
-        epochs=150,
-        batch_size=1024,
+        epochs=100,
+        batch_size=4196 * 16,
         verbose=1,
     )
 
     # Export the model to a SavedModel
     model.save(
-        "explicit_base", save_format="tf",
+        "explicit_model/explicit_base.model", save_format="h5",
     )
