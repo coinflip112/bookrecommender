@@ -14,8 +14,8 @@ class CustomPredict(object):
 
     def predict(self, instances, **kwargs):
         user_id = instances[0]
-        mapped_user_id = self.user_encoder.transform([user_id])
-        already_rated_items = self.to_mask_items_mapping[user_id]
+        mapped_user_id = self.user_encoder.transform([user_id])[0]
+        already_rated_items = self.to_mask_items_mapping[mapped_user_id]
 
         all_item_ids = np.array(range(self.item_encoder.classes_.shape[0]))
         all_item_ids = np.setdiff1d(all_item_ids, already_rated_items)
@@ -23,14 +23,14 @@ class CustomPredict(object):
         predictions = self._model.predict(
             x=[all_item_ids, np.full_like(all_item_ids, fill_value=mapped_user_id)]
         )
-        top_10_predictions = sorted(
+        top_predictions = sorted(
             zip(predictions, all_item_ids), key=lambda x: x[0], reverse=True
-        )[:10]
-        top_10_prediction_ids = [pred[1] for pred in top_10_predictions]
+        )[: kwargs["k"]]
+        top_predictions_ids = [pred[1] for pred in top_predictions]
 
-        top_10_isbn = self.item_encoder.inverse_transform(top_10_prediction_ids)
+        top_isbns = self.item_encoder.inverse_transform(top_predictions_ids)
 
-        return list(top_10_isbn.astype(str))
+        return list(top_isbns.astype(str))
 
     @classmethod
     def from_path(cls, model_dir):
