@@ -1,0 +1,23 @@
+md5: 90a8142a0821257e4c751478acff1417
+cmd: python preprocessing/explicit_set_prepare.py
+deps:
+- md5: 796f30a7ba7e630c6effefcfdd37628c
+  path: preprocessing/explicit_set_prepare.py
+- md5: 0697cf5a1f7a77a981b6b67fbcdcfd9c
+  path: data/ratings_clean.csv
+outs:
+- md5: e1419c1fae6c2205b1ea4afa4020421b
+  path: data/explicit_train_set.csv
+  cache: true
+  metric: false
+  persist: false
+- md5: db3953be0356929dc906d8b730a51b4b
+  path: encoders/explicit_user.encoder
+  cache: true
+  metric: false
+  persist: false
+- md5: a1d7a1dd1996463dc710bae8c2e17285
+  path: encoders/explicit_book.encoder
+  cache: true
+  metric: false
+  persist: false

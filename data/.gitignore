@@ -7,3 +7,4 @@
 /id_transformed_explicit_ratings.csv
 /users_for_item.tfrecords
 /items_for_user.tfrecords
+/explicit_train_set.csv
